@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <title>Order form</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+          color:black;
+      height: 100%;
+      background-image: linear-gradient(180deg, rgb(241, 114, 114), rgb(236, 236, 219));
+      }
+      body, input, select { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: blue;
+      }
+      h1, h3 {
+      font-weight: 400;
+      }
+      h1 {
+      font-size: 32px;
+      }
+      h3 {
+      color: #1c87c9;
+      }
+      .main-block, .info {
+      display: flex;
+      flex-direction: column;
+      }
+      .main-block {
+      justify-content: center;
+      align-items: center;
+      width: 100%; 
+      {% comment %} min-height: 100%; {% endcomment %}
+      margin: 0 auto;
+      {% comment %} background: url("/uploads/media/default/0001/01/e7a97bd9b2d25886cc7b9115de83b6b28b73b90b.jpeg") no-repeat center;
+      background-size: cover; {% endcomment %}
+      }
+      form {
+      width: 60%; 
+      padding: 25px;
+      margin-bottom: 0px;
+      background :white;
+      {% comment %} background: rgba(0, 0, 0, 0.9); {% endcomment %}
+      }
+      input, select {
+      padding: 5px;
+      margin-bottom: 20px;
+      {% comment %} background: transparent; {% endcomment %}
+      border: none;
+      border-bottom: 1px solid black;
+      }
+      input::placeholder {
+      color: black;
+      }
+      option {
+      background: black; 
+      border: none;
+      }
+      .metod {
+      display: flex; 
+      }
+      
+      button {
+      display: block;
+      width: 200px;
+      padding: 10px;
+      margin: 20px auto 0;
+      border: none;
+      border-radius: 5px; 
+      background: #1c87c9; 
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      }
+      button:hover {
+      background: #095484;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+      <h1>Order Form</h1>
+      <form method="POST" action="checkout">
+        {% csrf_token %}
+        <div class="info">
+          <input class="fname" type="text" name="name" placeholder="Full name">
+          <input type="text" name="email_id" placeholder="Email">
+          <input type="text" name="address" placeholder="Address">
+          <input type="text" name="prod_id" placeholder="Product Id">
+          <input type="text" name="prod_qn" placeholder="Product Quantity">
+          <input type="text" name="prod_color" placeholder="Product color">
+        </div>
+        
+        <p>
+          <button type="submit" <a href="{% url 'confirm' %}">Submit</a></button>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

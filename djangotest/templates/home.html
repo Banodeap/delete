@@ -1,0 +1,123 @@
+{% load static %}
+<html>
+<head>
+	<title>Ecom</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'headphone' %}">Headphone</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page1" href="{% url 'smartphone' %}">Smart Phones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page2" href="{% url 'laptop' %}">Laptop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page3" href="{% url 'watch' %}">Watches</a>
+        </li>
+      </ul>
+      {% comment %} <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> {% endcomment %}
+    </div>
+  </div>
+</nav>
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" >
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://source.unsplash.com/1600x400/?mobiles" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://source.unsplash.com/1600x400/?Laptop" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://source.unsplash.com/1600x400/?Watches" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<br>
+<div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary" ><a href= "{% url 'smartphone' %}">Smartphone</a></strong>
+              
+              <p class="card-text mb-auto">Here you will get awesome mobiles with variety range and features</p>
+              
+            </div>
+            <div class="col-auto d-none d-lg-block">
+            <img src="https://source.unsplash.com/250x250/?Smartphone" class="bd-placeholder-img" width="200" height="250"></img>
+              
+    
+            </div>
+          </div>
+        </div>
+         
+         <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary" ><a href="{% url 'headphone' %}">Headphone</a></strong>
+              <p class="card-text mb-auto">Here you will get awesome headphones with variety range and features</p>
+              
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="https://source.unsplash.com/250x250/?Headphone" class="bd-placeholder-img" width="200" height="250"></img>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary"><a href="{% url 'laptop' %}">Laptop</a></strong>
+              <p class="card-text mb-auto">Here you will get awesome Laptop with variety range and features</p>
+              
+            </div>
+            <div class="col-auto d-none d-lg-block">
+             <img src="https://source.unsplash.com/250x250/?Laptop" class="bd-placeholder-img" width="200" height="250"></img>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary"><a href="{% url 'watch' %}">Watches</a></strong>
+             
+              <p class="card-text mb-auto">Here you will get awesome Watches with variety range and features</p>
+              
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="https://source.unsplash.com/250x250/?Watches" class="bd-placeholder-img" width="200" height="250"></img>
+    
+            </div>
+          </div>
+        </div>
+</body>

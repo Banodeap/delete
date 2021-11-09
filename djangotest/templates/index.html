@@ -1,0 +1,17 @@
+<h1>Fetched Data</h1>
+
+<!-- <p>Product Name: {{prod_name}}</p>
+<p>Product Type: {{prod_type}}</p>
+<p>Product Price: {{prod_price}}</p>
+<p>Product Colors: {{prod_color}}</p>
+<p>Product Quantity: {{prod_qn}}</p> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+{% for i, k in products.items %}
+<p>{{i}}</p>
+<p>{{k}}</p>
+{%endfor%}
+
+<button type="button" class="btn btn-danger btn-sm">
+    <a>BUY</a>
+    </button>
